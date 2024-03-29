@@ -5,6 +5,10 @@ function chain.links.user
         else
                 set suffix "@$hostname"
         end
-        echo cyan
-        echo "$USER$suffix"
+        if test (id -u $USER) -eq 0
+                return
+        else
+                echo cyan
+                echo "$USER$suffix"
+        end
 end
