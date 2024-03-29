@@ -3,7 +3,7 @@ function chain.links.root
     or set chain_su_glyph "⚡"
 
   if test (id -u $USER) -eq 0
-    echo yellow
+    echo cyan
     echo $chain_su_glyph
   end
 end
